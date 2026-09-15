@@ -3,7 +3,7 @@ import { createWhatsAppUrl } from '../data/content';
 
 export const FloatingWhatsApp: React.FC = () => {
   const directUrl = createWhatsAppUrl(
-    'Olá, Jacqueline! Acessei seu site e gostaria de conversar sobre imóveis em Minas Gerais e região.'
+    'Olá, Jacqueline! Acessei seu site e gostaria de conversar sobre imóveis em Pará de Minas - MG.'
   );
 
   return (
@@ -13,18 +13,18 @@ export const FloatingWhatsApp: React.FC = () => {
       id="floating-whatsapp-widget"
     >
       {/* Tooltip elegante em desktop */}
-      <span className="hidden sm:inline-block mr-3 px-3 py-1.5 bg-[#292725] text-[#FAF8F4] text-xs tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg whitespace-nowrap">
+      <span className="hidden sm:inline-block mr-3 px-3.5 py-1.5 bg-[var(--color-bg-secondary)] border border-[var(--color-border-subtle)] text-[var(--color-text-main)] text-xs tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl whitespace-nowrap font-medium rounded-xs">
         Falar no WhatsApp
       </span>
 
-      {/* Botão Oficial do WhatsApp */}
+      {/* Botão Oficial do WhatsApp com verde oficial inalterado em ambos os temas */}
       <a
         id="floating-whatsapp-toggle"
         href={directUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Conversar com Jacqueline Almeida no WhatsApp"
-        className="w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-[0_8px_25px_rgba(37,211,102,0.4)] hover:shadow-[0_10px_30px_rgba(37,211,102,0.55)] hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
+        className="w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:shadow-[0_10px_30px_rgba(37,211,102,0.6)] hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40"
         title="Conversar com Jacqueline Almeida no WhatsApp"
       >
         {/* Símbolo Oficial Real do WhatsApp */}
@@ -39,4 +39,3 @@ export const FloatingWhatsApp: React.FC = () => {
     </aside>
   );
 };
-

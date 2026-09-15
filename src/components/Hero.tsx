@@ -26,13 +26,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
   }, [isPaused, nextSlide]);
 
   const whatsappUrl = createWhatsAppUrl(
-    'Olá, Jacqueline! Acessei seu site e gostaria de conversar sobre imóveis em Minas Gerais.'
+    'Olá, Jacqueline! Acessei seu site e gostaria de conversar sobre imóveis em Pará de Minas e região.'
   );
 
   return (
     <section
       id="inicio"
-      className="relative w-full h-[88vh] min-h-[580px] max-h-[920px] bg-[#14100D] overflow-hidden select-none"
+      className="relative w-full h-[88vh] min-h-[580px] max-h-[920px] bg-[#0D0D0D] overflow-hidden select-none"
       aria-label="Apresentação de Imóveis e Oportunidades"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -47,23 +47,22 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
               isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
-            {/* Background image with subtle slow zoom for life and depth */}
+            {/* Background image with Ken Burns slow zoom-in for dynamic architectural depth */}
             <div
-              className={`w-full h-full bg-cover bg-center transition-transform duration-[7000ms] ease-out ${
-                isActive ? 'scale-105' : 'scale-100'
+              className={`w-full h-full bg-cover bg-center ${
+                isActive ? 'animate-ken-burns' : 'scale-100'
               }`}
               style={{ backgroundImage: `url(${slide.image})` }}
             />
-            {/* Contrast Overlay with warm brown / charcoal tones for text legibility without obscuring the architecture */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#14100D]/90 via-[#14100D]/45 to-[#14100D]/65" />
-            <div className="absolute inset-0 bg-black/20" />
+            {/* Contrast Overlay with balanced darkness so the photo stays luminous and text is sharp */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/55" />
           </div>
         );
       })}
 
       {/* Caption discreta da fotografia em exibição no topo à direita */}
-      <div className="absolute top-28 sm:top-32 right-6 sm:right-12 z-20 hidden sm:flex items-center gap-2 bg-[#14100D]/60 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 text-[11px] text-white/80 uppercase tracking-widest font-mono">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
+      <div className="absolute top-24 sm:top-28 right-6 sm:right-12 z-20 hidden sm:flex items-center gap-2 bg-black/60 backdrop-blur-md border border-white/10 px-3.5 py-1.5 text-[11px] text-white/90 uppercase tracking-widest font-mono">
+        <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] animate-pulse" />
         {HERO_SLIDES[currentSlide].tag} • {HERO_SLIDES[currentSlide].title}
       </div>
 
@@ -73,28 +72,28 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           
           {/* Tag de Autoridade */}
           <div className="inline-flex items-center gap-3">
-            <span className="h-px w-6 sm:w-10 bg-[#D4AF37]" />
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[#E8DCC4] font-medium drop-shadow-sm">
+            <span className="h-px w-6 sm:w-10 bg-[var(--color-gold)]" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.3em] text-[var(--color-gold-light)] font-medium drop-shadow-sm">
               20 ANOS DE EXPERIÊNCIA
             </span>
           </div>
 
           {/* Título Principal Curto e Elegante */}
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#FAF8F4] font-normal tracking-tight leading-[1.08] drop-shadow-md">
-            Encontre seu <span className="italic font-normal text-[#E8DCC4]">próximo imóvel.</span>
+          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-white font-normal tracking-tight leading-[1.08] drop-shadow-md">
+            Encontre seu <span className="italic font-normal text-[var(--color-gold-light)]">próximo imóvel.</span>
           </h1>
 
           {/* Frase Curta Solicitada */}
-          <p className="font-sans text-base sm:text-xl text-[#F1ECE4] font-normal leading-relaxed max-w-2xl drop-shadow-sm">
-            Casas, apartamentos, lotes e oportunidades de investimento.
+          <p className="font-sans text-base sm:text-xl text-white/90 font-normal leading-relaxed max-w-2xl drop-shadow-sm">
+            Casas, apartamentos, lotes e oportunidades de investimento em Pará de Minas - MG.
           </p>
 
-          {/* Botões Solicitados */}
+          {/* Botões com alto contraste e elegância */}
           <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-5">
             <button
               id="hero-ver-imoveis-btn"
               onClick={onExploreClick}
-              className="px-8 py-4 bg-[#FAF8F4] text-[#292725] hover:bg-[#E8DCC4] text-xs font-semibold tracking-widest uppercase transition-all shadow-lg text-center active:scale-95"
+              className="px-8 py-4 bg-[var(--color-gold)] text-[#0D0D0D] hover:bg-[var(--color-gold-light)] text-xs font-bold tracking-widest uppercase transition-all shadow-lg text-center active:scale-95"
             >
               VER IMÓVEIS
             </button>
@@ -104,7 +103,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#5A4636]/80 hover:bg-[#3A2C20] backdrop-blur-md text-[#FAF8F4] border border-white/20 hover:border-[#D4AF37] text-xs font-medium tracking-widest uppercase text-center transition-all shadow-lg active:scale-95"
+              className="px-8 py-4 bg-black/50 hover:bg-black/80 backdrop-blur-md text-white border border-white/30 hover:border-[var(--color-gold)] text-xs font-medium tracking-widest uppercase text-center transition-all shadow-lg active:scale-95"
             >
               FALE COM JACQUELINE
             </a>
@@ -123,7 +122,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
                 onClick={() => setCurrentSlide(idx)}
                 aria-label={`Ir para fotografia ${idx + 1}`}
                 className={`h-1.5 transition-all duration-500 ${
-                  idx === currentSlide ? 'w-8 bg-[#D4AF37]' : 'w-2.5 bg-white/40 hover:bg-white/70'
+                  idx === currentSlide ? 'w-8 bg-[var(--color-gold)]' : 'w-2.5 bg-white/40 hover:bg-white/70'
                 }`}
               />
             ))}
@@ -135,7 +134,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           {/* Indicação Discreta: "Deslize para explorar" */}
           <button
             onClick={onExploreClick}
-            className="group flex items-center gap-2 text-white/70 hover:text-white transition-colors text-[11px] uppercase tracking-[0.2em] font-medium"
+            className="group flex items-center gap-2 text-white/75 hover:text-white transition-colors text-[11px] uppercase tracking-[0.2em] font-medium"
             aria-label="Deslize para explorar os imóveis"
           >
             <span>Deslize para explorar</span>
@@ -149,7 +148,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
       <button
         onClick={prevSlide}
         aria-label="Fotografia anterior"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-black/60 backdrop-blur-md border border-white/10 text-white flex items-center justify-center transition-colors hidden md:flex"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/15 text-white flex items-center justify-center transition-colors hidden md:flex"
       >
         <ChevronLeft className="w-5 h-5" />
       </button>
@@ -157,7 +156,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
       <button
         onClick={nextSlide}
         aria-label="Próxima fotografia"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/30 hover:bg-black/60 backdrop-blur-md border border-white/10 text-white flex items-center justify-center transition-colors hidden md:flex"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur-md border border-white/15 text-white flex items-center justify-center transition-colors hidden md:flex"
       >
         <ChevronRight className="w-5 h-5" />
       </button>

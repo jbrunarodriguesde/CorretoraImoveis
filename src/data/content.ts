@@ -12,7 +12,7 @@ export const BROKER_INFO = {
   instagramHandle: '@jacquelinealmeida_corretora',
   instagramUrl: 'https://www.instagram.com/jacquelinealmeida_corretora/',
   email: 'contato@jacquelinealmeidacorretora.com.br',
-  region: 'Minas Gerais (Nova Serrana, Belo Horizonte, Divinópolis e Região)',
+  region: 'Pará de Minas - MG e Região',
   hours: 'Segunda a Sábado, das 08h às 19h (Atendimento com hora marcada)',
 };
 
@@ -38,13 +38,13 @@ export const HERO_SLIDES: HeroSlide[] = [
     id: 'slide-3',
     image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=85',
     title: 'Apartamentos & Penthouses Exclusivas',
-    tag: 'Belo Horizonte & Região'
+    tag: 'Pará de Minas & Região'
   },
   {
     id: 'slide-4',
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=85',
     title: 'Lotes e Terrenos em Condomínio',
-    tag: 'Paisagens de Minas Gerais'
+    tag: 'Pará de Minas - MG'
   },
   {
     id: 'slide-5',
@@ -55,23 +55,23 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: 'slide-6',
     image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=85',
-    title: 'Grandes Oportunidades em Nova Serrana & MG',
+    title: 'Grandes Oportunidades em Pará de Minas',
     tag: 'Valorização Imobiliária'
   }
 ];
 
 export const PROPERTIES: Property[] = [
   {
-    id: 'prop-ns-1',
+    id: 'prop-pm-1',
     code: 'JA-201',
-    title: 'Casa em Nova Serrana',
+    title: 'Casa em Pará de Minas',
     type: 'casa',
     typeName: 'Casa Contemporânea',
     price: 1250000,
     priceFormatted: 'R$ 1.250.000',
     location: 'Bairro Residencial Nobre',
-    neighborhood: 'Park Dona Zeli',
-    city: 'Nova Serrana / MG',
+    neighborhood: 'Residencial Nobre',
+    city: 'Pará de Minas - MG',
     description: 'Casa moderna com fachada imponente, 3 suítes, living com pé-direito elevado e espaço gourmet com piscina aquecida.',
     fullDescription: 'Excelente imóvel com acabamentos de primeira linha em porcelanato acetinado e bancadas em quartzo. Projeto luminotécnico em LED, suíte master com closet generoso, cozinha em ilha integrada ao espaço gourmet com churrasqueira e piscina privativa com cascata.',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
@@ -97,18 +97,18 @@ export const PROPERTIES: Property[] = [
     featured: true,
   },
   {
-    id: 'prop-bh-1',
+    id: 'prop-pm-2',
     code: 'JA-202',
-    title: 'Apartamento em Belo Horizonte',
+    title: 'Apartamento em Pará de Minas',
     type: 'apartamento',
     typeName: 'Apartamento de Alto Padrão',
     price: 890000,
     priceFormatted: 'R$ 890.000',
-    location: 'Região Nobre Sul',
-    neighborhood: 'Funcionários / Savassi',
-    city: 'Belo Horizonte / MG',
+    location: 'Região Nobre Central',
+    neighborhood: 'Centro Nobre',
+    city: 'Pará de Minas - MG',
     description: 'Apartamento elegante com varanda gourmet, 3 quartos, vista livre definitiva e acabamentos refinados.',
-    fullDescription: 'Localização privilegiada próximo aos melhores pontos da capital mineira. Edifício moderno com portaria 24h, lazer completo, piscina climatizada, salão de festas e academia equipada. Unidade com marcenaria planejada, suíte espaçosa e 2 vagas de garagem demarcadas.',
+    fullDescription: 'Localização privilegiada no coração nobre de Pará de Minas. Edifício moderno com portaria, salão de festas e academia equipada. Unidade com marcenaria planejada, suíte espaçosa e 2 vagas de garagem demarcadas.',
     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
@@ -125,24 +125,24 @@ export const PROPERTIES: Property[] = [
       'Prédio moderno com lazer completo',
       'Piscina e academia no condomínio',
       '2 vagas de garagem demarcadas',
-      'Segurança e portaria 24h'
+      'Segurança e controle de acesso'
     ],
     badge: 'Oportunidade',
     featured: true,
   },
   {
-    id: 'prop-lote-1',
+    id: 'prop-pm-3',
     code: 'JA-203',
-    title: 'Lote em condomínio',
+    title: 'Lote em condomínio fechado',
     type: 'lote',
     typeName: 'Lote em Condomínio Fechado',
     price: 320000,
     priceFormatted: 'R$ 320.000',
     location: 'Condomínio Fechado Residencial',
     neighborhood: 'Reserva das Palmeiras',
-    city: 'Nova Serrana / MG',
+    city: 'Pará de Minas - MG',
     description: 'Terreno plano de 500 m² pronto para construir em condomínio com portaria 24h, lago e área de lazer completa.',
-    fullDescription: 'Excelente lote com topografia 100% plana, facilitando o custo de fundação da sua obra. Localizado na parte alta do condomínio, garantindo ventilação constante e vista permanente para a serra. Infraestrutura com asfalto ecológico, água, energia, clube privativo e quadras esportivas.',
+    fullDescription: 'Excelente lote com topografia 100% plana, facilitando o custo de fundação da sua obra em Pará de Minas. Localizado na parte alta do condomínio, garantindo ventilação constante e vista permanente. Infraestrutura completa com asfalto, água, energia, clube privativo e quadras esportivas.',
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
@@ -162,16 +162,16 @@ export const PROPERTIES: Property[] = [
   {
     id: 'prop-1',
     code: 'JA-101',
-    title: 'Mansão Villa Imperial Alphaville',
+    title: 'Mansão Contemporânea em Condomínio',
     type: 'casa',
     typeName: 'Casa em Condomínio Fechado',
     price: 3450000,
     priceFormatted: 'R$ 3.450.000',
-    location: 'Condomínio Fechado Alphaville',
-    neighborhood: 'Alphaville',
-    city: 'Nova Lima / BH',
+    location: 'Condomínio Fechado Residencial',
+    neighborhood: 'Setor Nobre',
+    city: 'Pará de Minas - MG',
     description: 'Mansão contemporânea com pé-direito duplo de 6m, living integrado à piscina com borda infinita e vista panorâmica definitiva.',
-    fullDescription: 'Projeto arquitetônico assinado com acabamentos refinados em mármore travertino e esquadrias termoacústicas. Amplo living para 3 ambientes, espaço gourmet climatizado com churrasqueira a gás, adega climatizada para 300 rótulos, sauna a vapor integrada à piscina aquecida com borda infinita, e 4 amplas suítes com closet e banheiras de imersão.',
+    fullDescription: 'Projeto arquitetônico assinado com acabamentos refinados em mármore travertino e esquadrias termoacústicas. Amplo living para 3 ambientes, espaço gourmet climatizado com churrasqueira, adega climatizada, sauna a vapor integrada à piscina aquecida com borda infinita, e 4 amplas suítes com closet e banheiras de imersão.',
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
@@ -205,9 +205,9 @@ export const PROPERTIES: Property[] = [
     priceFormatted: 'R$ 2.890.000',
     location: 'Setor Nobre Central',
     neighborhood: 'Centro / Bela Vista',
-    city: 'Divinópolis / MG',
+    city: 'Pará de Minas - MG',
     description: 'Cobertura duplex cinematográfica com spa privativo na varanda e 360º de skyline deslumbrante.',
-    fullDescription: 'Um conceito inigualável de viver nas alturas. Pavimento inferior com 3 confortáveis suítes, copa íntima e master com banheira freestanding. Pavimento superior dedicado ao lazer e entretenimento sofisticado, contendo solarium, jacuzzi aquecida, deck em madeira nobre e bancada gourmet em quartzo negro.',
+    fullDescription: 'Um conceito inigualável de viver nas alturas. Pavimento inferior com 3 confortáveis suítes, copa íntima e master com banheira freestanding. Pavimento superior dedicado ao lazer e entretenimento sofisticado, contendo solarium, jacuzzi aquecida, deck em madeira nobre e bancada gourmet.',
     image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
@@ -239,9 +239,9 @@ export const PROPERTIES: Property[] = [
     priceFormatted: 'R$ 680.000',
     location: 'Reserva Ecológica Privativa',
     neighborhood: 'Bosque dos Nobres',
-    city: 'Nova Serrana / MG',
+    city: 'Pará de Minas - MG',
     description: 'Terreno plano de 1.250 m² em localização privilegiada com bosque nativo ao fundo e topografia perfeita.',
-    fullDescription: 'Excelente topografia plana com leve declive suave favorável para projeto com vista aberta para o pôr do sol. Condomínio com infraestrutura de resort: heliponto homologado, hípica, quadras de tênis de saibro, beach tennis, clube social e fiação 100% subterrânea.',
+    fullDescription: 'Excelente topografia plana com leve declive suave favorável para projeto com vista aberta para o pôr do sol em Pará de Minas. Condomínio com infraestrutura completa: portaria 24h, quadras de tênis de saibro, beach tennis, clube social e fiação subterrânea.',
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
@@ -252,7 +252,7 @@ export const PROPERTIES: Property[] = [
       'Topografia 100% aproveitável',
       'Fiação subterrânea e iluminação LED',
       'Clube privativo com quadras de tênis',
-      'Heliponto e segurança armada 24h',
+      'Segurança armada 24h',
       'Alta valorização projetada'
     ],
     badge: 'Oportunidade',
@@ -266,11 +266,11 @@ export const PROPERTIES: Property[] = [
     typeName: 'Investimento Comercial',
     price: 1650000,
     priceFormatted: 'R$ 1.650.000',
-    location: 'Eixo Comercial Financeiro',
-    neighborhood: 'Parque das Nações',
-    city: 'Divinópolis / MG',
+    location: 'Eixo Comercial Central',
+    neighborhood: 'Centro Empresarial',
+    city: 'Pará de Minas - MG',
     description: 'Conjunto corporativo unificado com locação corporativa garantida e rentabilidade líquida imediata.',
-    fullDescription: 'Imóvel de alto rendimento para investidores focados em renda passiva consistente e segurança patrimonial. Locado para grupo médico consolidado por contrato atípico de longo prazo (5 anos restantes, reajuste por IPCA). Yield mensal estimado de 0,78% a.m. líquido de impostos.',
+    fullDescription: 'Imóvel de alto rendimento para investidores focados em renda passiva consistente e segurança patrimonial em Pará de Minas. Locado para grupo consolidado por contrato de longo prazo. Yield mensal estimado de 0,78% a.m. líquido de impostos.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
@@ -281,9 +281,9 @@ export const PROPERTIES: Property[] = [
     parkingSpots: 3,
     yieldRate: '0,78% a.m.',
     features: [
-      'Inquilino AAA com contrato de 5 anos',
+      'Inquilino consolidado com contrato de 5 anos',
       'Retorno superior a aplicações de renda fixa',
-      'Prédio corporativo com auditório e concierge',
+      'Prédio corporativo com recepção e segurança',
       'Gerador de emergência dedicado',
       'Localização em polo de saúde e negócios'
     ],
@@ -293,16 +293,16 @@ export const PROPERTIES: Property[] = [
   {
     id: 'prop-5',
     code: 'JA-105',
-    title: 'Mansão Bauhaus com Lago Particular',
+    title: 'Residência Villa Imperial com Lazer Completo',
     type: 'casa',
     typeName: 'Casa Contemporânea',
     price: 4200000,
     priceFormatted: 'R$ 4.200.000',
-    location: 'Enseada dos Lagos',
-    neighborhood: 'Condomínio Náutico',
-    city: 'Capitólio / MG',
-    description: 'Propriedade náutica de tirar o fôlego com deck privativo para lancha, spa aquecido e 5 suítes master.',
-    fullDescription: 'Viva momentos inesquecíveis em frente às águas cristalinas com toda a sofisticação da arquitetura moderna. Projeto integrado com pé-direito monumental, adega de vidro suspensa, espaço de churrasqueira parrilla argentina e pier privativo.',
+    location: 'Condomínio Fechado de Chácaras Nobres',
+    neighborhood: 'Chácaras Nobres',
+    city: 'Pará de Minas - MG',
+    description: 'Propriedade de alto luxo com área verde privativa, piscina aquecida, espaço gourmet e 5 suítes master.',
+    fullDescription: 'Viva momentos inesquecíveis em meio à tranquilidade com toda a sofisticação da arquitetura moderna. Projeto integrado com pé-direito monumental, adega climatizada, espaço de churrasqueira parrilla e área de lazer privativa completa.',
     image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80',
@@ -314,11 +314,11 @@ export const PROPERTIES: Property[] = [
     bathrooms: 7,
     parkingSpots: 6,
     features: [
-      'Acesso privativo à represa com rampa e pier',
-      'Piscina com borda infinita debruçada sobre a água',
-      'Totalmente mobiliada com móveis de design',
-      'Garagem coberta para embarcações e 6 carros',
-      'Heliponto comunitário a 500m'
+      'Piscina com borda infinita aquecida',
+      'Espaço gourmet completo integrado ao living',
+      'Acabamento em pedras nobres e marcenaria de alto padrão',
+      'Garagem coberta para 6 veículos',
+      'Segurança e portaria 24 horas'
     ],
     badge: 'Super Luxo',
     featured: false,
@@ -332,10 +332,10 @@ export const PROPERTIES: Property[] = [
     price: 1950000,
     priceFormatted: 'R$ 1.950.000',
     location: 'Bairro Nobre Tradicional',
-    neighborhood: 'Santa Mônica',
-    city: 'Divinópolis / MG',
+    neighborhood: 'Setor Nobre',
+    city: 'Pará de Minas - MG',
     description: '1 apartamento por andar com 240 m² privativos, varanda gourmet integrada e acabamentos de altíssimo padrão.',
-    fullDescription: 'Privacidade absoluta para você e sua família. Planta inteligente com iluminação natural em todos os cômodos, suíte master com hidro e closet sr. e sra., além de infraestrutura pronta para ar-condicionado VRF e aspiração central.',
+    fullDescription: 'Privacidade absoluta para você e sua família em Pará de Minas. Planta inteligente com iluminação natural em todos os cômodos, suíte master com hidro e closet sr. e sra., além de infraestrutura pronta para ar-condicionado e automação.',
     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
@@ -348,7 +348,7 @@ export const PROPERTIES: Property[] = [
     parkingSpots: 3,
     features: [
       'Apenas 1 unidade por andar',
-      'Varanda gourmet com churrasqueira a carvão',
+      'Varanda gourmet com churrasqueira',
       'Janelas com persianas integradas e automação',
       'Área de lazer completa com piscina aquecida e academia'
     ],
@@ -364,10 +364,10 @@ export const PROPERTIES: Property[] = [
     price: 1200000,
     priceFormatted: 'R$ 1.200.000',
     location: 'Avenida Principal de Acesso',
-    neighborhood: 'Vila Santo Antônio',
-    city: 'Itaúna / MG',
+    neighborhood: 'Eixo Comercial',
+    city: 'Pará de Minas - MG',
     description: 'Área nobre de 980 m² de esquina com altíssimo fluxo veicular e excelente coeficiente de aproveitamento.',
-    fullDescription: 'Ideal para construção de strip mall, clínicas especializadas ou prédio residencial boutique. Zona comercial aprovada com estudo de viabilidade econômica e topografia 100% nivelada.',
+    fullDescription: 'Ideal para construção de polo comercial, clínicas especializadas ou prédio residencial boutique. Zona comercial aprovada com estudo de viabilidade econômica e topografia nivelada em Pará de Minas - MG.',
     image: 'https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1200&q=80'
@@ -385,16 +385,16 @@ export const PROPERTIES: Property[] = [
   {
     id: 'prop-8',
     code: 'JA-108',
-    title: 'Portfólio Fracionado de Studios para Locação',
+    title: 'Portfólio de Studios para Renda Imobiliária',
     type: 'investimento',
     typeName: 'Fundo Imobiliário / Renda',
     price: 890000,
     priceFormatted: 'R$ 890.000',
-    location: 'Polo Universitário & Tecnológico',
-    neighborhood: 'Sidil / Universitário',
-    city: 'Divinópolis / MG',
-    description: 'Kit de 3 studios mobiliados com gestão de locação short-stay profissional, rendimento médio de 1,1% a.m.',
-    fullDescription: 'Excelente alternativa para quem quer diversificar em imóveis de alta liquidez. Todas as unidades contam com fechadura digital, ar condicionado inverter, mobília planejada e gestão automatizada de reservas.',
+    location: 'Polo Central de Negócios',
+    neighborhood: 'Centro Nobre',
+    city: 'Pará de Minas - MG',
+    description: 'Conjunto de 3 studios mobiliados para locação com rentabilidade consistente de 1,1% a.m.',
+    fullDescription: 'Excelente alternativa para quem quer diversificar em imóveis de alta liquidez em Pará de Minas - MG. Todas as unidades contam com fechadura digital, ar condicionado inverter, mobília planejada e gestão facilitada.',
     image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80'
@@ -405,9 +405,9 @@ export const PROPERTIES: Property[] = [
     yieldRate: '1,1% a.m.',
     features: [
       '3 studios totalmente montados e decorados',
-      'Gestão por operadora especializada',
-      'Recebimento direto via plataforma',
-      'Histórico de ocupação média de 82%'
+      'Fechadura eletrônica em todas as unidades',
+      'Recebimento direto via contrato garantido',
+      'Excelente localização no centro de Pará de Minas'
     ],
     badge: 'Yield Alto',
     featured: false,
@@ -419,7 +419,7 @@ export const CATEGORIES: CategoryCard[] = [
     id: 'cat-casas',
     title: 'CASAS',
     slug: 'casa',
-    description: 'Mansões e casas de alto padrão em condomínios fechados com piscina e lazer privativo.',
+    description: 'Mansões e casas de alto padrão em condomínios fechados com piscina e lazer privativo em Pará de Minas - MG.',
     imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
     countLabel: 'Alto Padrão & Condomínios'
   },
@@ -427,7 +427,7 @@ export const CATEGORIES: CategoryCard[] = [
     id: 'cat-aptos',
     title: 'APARTAMENTOS',
     slug: 'apartamento',
-    description: 'Unidades nobres, coberturas e penthouses nas melhores localizações de Belo Horizonte e região.',
+    description: 'Unidades nobres, coberturas e penthouses nas melhores localizações de Pará de Minas - MG.',
     imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
     countLabel: 'Coberturas & Penthouses'
   },
@@ -435,7 +435,7 @@ export const CATEGORIES: CategoryCard[] = [
     id: 'cat-lotes',
     title: 'LOTES',
     slug: 'lote',
-    description: 'Terrenos planos e topografias privilegiadas para construir em condomínios de alto padrão.',
+    description: 'Terrenos planos e topografias privilegiadas para construir em condomínios fechados de Pará de Minas - MG.',
     imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
     countLabel: 'Lotes em Condomínio'
   },
@@ -443,7 +443,7 @@ export const CATEGORIES: CategoryCard[] = [
     id: 'cat-invest',
     title: 'INVESTIMENTOS',
     slug: 'investimento',
-    description: 'Ativos estratégicos com rentabilidade imediata e alto potencial de valorização futura.',
+    description: 'Ativos estratégicos com rentabilidade imediata e alto potencial de valorização em Pará de Minas - MG.',
     imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     countLabel: 'Renda & Valorização'
   }
@@ -451,241 +451,119 @@ export const CATEGORIES: CategoryCard[] = [
 
 export const REAL_ESTATE_SERVICES: RealEstateService[] = [
   {
-    id: 'serv-1',
-    title: 'Compra de imóveis',
-    description: 'Curadoria criteriosa de casas, apartamentos e áreas nobres com assessoria segura do início ao registro.',
-    whatsappMessage: 'Olá, Jacqueline! Gostaria de assessoria para compra de um imóvel.'
+    id: 'srv-compra',
+    title: 'Curadoria & Compra de Imóveis',
+    description: 'Assessoria completa e confidencial na busca e seleção do imóvel ideal em Pará de Minas - MG, alinhado ao seu estilo de vida ou objetivos patrimoniais.',
+    whatsappMessage: 'Olá, Jacqueline! Gostaria de uma assessoria para compra de imóvel em Pará de Minas - MG.'
   },
   {
-    id: 'serv-2',
-    title: 'Venda de imóveis',
-    description: 'Posicionamento qualificado, discrição e acesso direto a compradores e investidores selecionados.',
-    whatsappMessage: 'Olá, Jacqueline! Desejo cadastrar meu imóvel para venda com sua assessoria.'
+    id: 'srv-venda',
+    title: 'Comercialização & Venda Exclusiva',
+    description: 'Estratégia de marketing imobiliário com produção fotográfica profissional, qualificação rigorosa de compradores e ampla divulgação dirigida.',
+    whatsappMessage: 'Olá, Jacqueline! Gostaria de anunciar e vender meu imóvel em Pará de Minas com sua assessoria.'
   },
   {
-    id: 'serv-3',
-    title: 'Lotes e terrenos',
-    description: 'Seleção de lotes em condomínios fechados, topografias privilegiadas e áreas de expansão em Minas Gerais.',
-    whatsappMessage: 'Olá, Jacqueline! Estou procurando lotes e terrenos para construir ou investir.'
+    id: 'srv-invest',
+    title: 'Consultoria de Investimento Imobiliário',
+    description: 'Análise de viabilidade financeira, taxa de retorno (yield), estudo de potencial de valorização e estruturação de portfólio de ativos.',
+    whatsappMessage: 'Olá, Jacqueline! Gostaria de agendar uma consultoria sobre investimentos imobiliários em Pará de Minas.'
   },
   {
-    id: 'serv-4',
-    title: 'Investimentos imobiliários',
-    description: 'Identificação de ativos com rentabilidade consistente, segurança documental e ganho patrimonial.',
-    whatsappMessage: 'Olá, Jacqueline! Quero conhecer as melhores oportunidades de investimento imobiliário.'
-  },
-  {
-    id: 'serv-5',
-    title: 'Consultoria imobiliária',
-    description: 'Due diligence completa, avaliação mercadológica precisa e atendimento pessoal direto com 20 anos de mercado.',
-    whatsappMessage: 'Olá, Jacqueline! Gostaria de agendar uma consultoria imobiliária personalizada.'
-  }
-];
-
-
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: 'test-1',
-    clientName: 'Dr. Roberto Mendonça',
-    clientRole: 'Médico & Investidor',
-    city: 'Divinópolis / MG',
-    content: 'A Jacqueline não é apenas uma corretora; ela é uma estrategista imobiliária completa. Assessorou a compra do meu terreno e posteriormente a estruturação de duas salas corporativas com excelente taxa de retorno.',
-    rating: 5,
-    transactionType: 'Investimento Comercial & Residencial'
-  },
-  {
-    id: 'test-2',
-    clientName: 'Mariana & Carlos Silveira',
-    clientRole: 'Empresários',
-    city: 'Nova Lima / MG',
-    content: 'Procurávamos uma casa para a família há mais de 1 ano. Em duas semanas de consultoria com a Jacqueline, ela encontrou a propriedade exata no condomínio que queríamos, conduzindo a negociação com discrição e maestria impecáveis.',
-    rating: 5,
-    transactionType: 'Compra de Casa em Condomínio'
-  },
-  {
-    id: 'test-3',
-    clientName: 'Patrícia Guimarães',
-    clientRole: 'Arquiteta & Urbanista',
-    city: 'Belo Horizonte / MG',
-    content: 'A seriedade com que a Jacqueline analisa a documentação e os detalhes de zoneamento me impressionou. Seus 20 anos de mercado fazem toda a diferença na segurança de qualquer transação imobiliária.',
-    rating: 5,
-    transactionType: 'Consultoria para Terrenos'
-  }
-];
-
-export const INSTAGRAM_POSTS: InstagramPostItem[] = [
-  {
-    id: 'ig-1',
-    imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
-    caption: 'Detalhes que transformam uma casa em uma experiência de vida inesquecível. Conheça esta mansão em condomínio fechado. ✨',
-    likes: 342,
-    comments: 28,
-    tag: 'Tour Exclusivo',
-    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
-    isReel: true,
-  },
-  {
-    id: 'ig-2',
-    imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80',
-    caption: '3 fatores indispensáveis para analisar antes de investir em imóveis em 2026. Acompanhe a consultoria completa no vídeo.',
-    likes: 489,
-    comments: 42,
-    tag: 'Educação Financeira',
-    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
-    isReel: true,
-  },
-  {
-    id: 'ig-3',
-    imageUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80',
-    caption: 'Mais um sonho concretizado hoje com as chaves entregues! Gratidão aos clientes pela confiança nessa jornada de 20 anos.',
-    likes: 615,
-    comments: 54,
-    tag: 'Sonho Realizado',
-    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
-  },
-  {
-    id: 'ig-4',
-    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80',
-    caption: 'Cobertura com vista livre para o horizonte. Um refúgio suspenso feito para quem valoriza momentos únicos.',
-    likes: 524,
-    comments: 39,
-    tag: 'Oportunidade',
-    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
-    isReel: true,
-  }
-];
-
-export const DIFFERENTIALS = [
-  {
-    icon: 'ShieldCheck',
-    title: '20 anos de experiência',
-    description: 'Duas décadas de atuação sólida, acompanhando as oscilações do mercado e gerando negócios consistentes e seguros.'
-  },
-  {
-    icon: 'UserCheck',
-    title: 'Atendimento próximo e personalizado',
-    description: 'Entendimento aprofundado dos seus desejos, perfil familiar e capacidade de investimento, sem soluções genéricas.'
-  },
-  {
-    icon: 'TrendingUp',
-    title: 'Conhecimento do mercado imobiliário',
-    description: 'Domínio detalhado de zoneamento, tendências de valorização regional e precificação justa com embasamento técnico.'
-  },
-  {
-    icon: 'Target',
-    title: 'Foco em oportunidades reais',
-    description: 'Acesso a imóveis antes do mercado aberto (off-market) e identificação precisa de ativos com potencial de ganho de capital.'
-  },
-  {
-    icon: 'Briefcase',
-    title: 'Consultoria para compradores e investidores',
-    description: 'Apoio de ponta a ponta: avaliação mercadológica, due diligence documental, análise de contratos e assessoria jurídica.'
-  },
-  {
-    icon: 'MessageCircle',
-    title: 'Atendimento direto via WhatsApp',
-    description: 'Comunicação ágil, transparente e sem burocracia, direto com a especialista para responder suas dúvidas em tempo real.'
+    id: 'srv-avaliacao',
+    title: 'Avaliação Mercadológica & Regularização',
+    description: 'Parecer técnico de avaliação mercadológica de precisão e acompanhamento de documentação imobiliária com segurança jurídica e cartorária.',
+    whatsappMessage: 'Olá, Jacqueline! Gostaria de solicitar uma avaliação técnica e mercadológica do meu imóvel em Pará de Minas.'
   }
 ];
 
 export const HOW_IT_WORKS = [
   {
     step: '01',
-    title: 'Conte o que você procura',
-    description: 'Em uma conversa informal e objetiva, alinhamos seu objetivo de moradia ou investimento, localização ideal e expectativa financeira.'
+    title: 'Diagnóstico & Alinhamento',
+    description: 'Entendemos suas necessidades, preferências de localização e parâmetros orçamentários com total sigilo.',
   },
   {
     step: '02',
-    title: 'Receba opções selecionadas',
-    description: 'Filtramos criteriosamente apenas as oportunidades que atendem com precisão às suas métricas, poupando seu tempo precioso.'
+    title: 'Curadoria Seletiva',
+    description: 'Filtramos imóveis que realmente atendem ao padrão exigido, poupando seu tempo de visitas improdutivas.',
   },
   {
     step: '03',
-    title: 'Analise as melhores oportunidades',
-    description: 'Apresentamos um dossiê detalhado com potencial de valorização, histórico da região, custos e visitas guiadas personalizadas.'
+    title: 'Visitas Dirigidas',
+    description: 'Acompanhamento detalhado em cada imóvel selecionado, com análise técnica e estrutural da propriedade.',
   },
   {
     step: '04',
-    title: 'Tome sua decisão com segurança',
-    description: 'Condução ética da proposta, negociação de valores e assessoria documental completa até a formalização e registro da escritura.'
+    title: 'Negociação & Conclusão',
+    description: 'Segurança jurídica, redação de contratos e apoio completo em cartório até a entrega das chaves.',
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'test-1',
+    clientName: 'Dr. Eduardo Vasconcelos',
+    clientRole: 'Médico Cirurgião',
+    city: 'Pará de Minas - MG',
+    content: 'A Jacqueline conduziu todo o processo de aquisição da nossa casa em condomínio com uma transparência e competência exemplares. Cuidou de cada detalhe documental e nos deu total segurança.',
+    rating: 5,
+    transactionType: 'Compra de Casa em Condomínio',
+  },
+  {
+    id: 'test-2',
+    clientName: 'Mariana Guimarães',
+    clientRole: 'Empresária',
+    city: 'Pará de Minas - MG',
+    content: 'Comprar um imóvel de alto padrão exige confiança mútua. A discrição e o bom gosto da Jacqueline na seleção dos imóveis foram determinantes para encontrarmos a propriedade dos nossos sonhos.',
+    rating: 5,
+    transactionType: 'Compra de Imóvel de Alto Padrão',
+  },
+  {
+    id: 'test-3',
+    clientName: 'Roberto e Cláudia Silveira',
+    clientRole: 'Investidores Imobiliários',
+    city: 'Pará de Minas - MG',
+    content: 'Já realizamos três operações com a Jacqueline nos últimos anos. Todas superaram as expectativas de valorização e rentabilidade. É uma profissional indispensável no mercado.',
+    rating: 5,
+    transactionType: 'Investimentos Imobiliários',
   }
 ];
 
-export const HELP_OPTIONS = [
+export const INSTAGRAM_POSTS: InstagramPostItem[] = [
   {
-    id: 'comprar',
-    title: 'QUERO COMPRAR',
-    description: 'Encontre a casa, apartamento ou lote ideal com curadoria rigorosa e assessoria em todas as etapas.',
-    actionText: 'Quero comprar um imóvel',
-    whatsappMessage: 'Olá, Jacqueline! Estou interessado(a) em comprar um imóvel e gostaria de conhecer as opções disponíveis.'
+    id: 'ig-1',
+    caption: 'Mansão contemporânea com arquitetura de ponta e espaço gourmet integrado.',
+    imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
+    likes: 142,
+    comments: 18,
+    tag: 'Arquitetura'
   },
   {
-    id: 'vender',
-    title: 'QUERO VENDER',
-    description: 'Avaliação mercadológica precisa, posicionamento estratégico e discrição para comercializar seu patrimônio.',
-    actionText: 'Quero vender meu imóvel',
-    whatsappMessage: 'Olá, Jacqueline! Gostaria de conversar sobre a venda do meu imóvel com sua assessoria.'
+    id: 'ig-2',
+    caption: 'Detalhes que transformam uma casa em uma verdadeira obra de arte.',
+    imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80',
+    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
+    likes: 198,
+    comments: 24,
+    tag: 'Design'
   },
   {
-    id: 'investir',
-    title: 'QUERO INVESTIR',
-    description: 'Identificação de ativos com potencial de ganho de capital, renda de locação consistente e segurança jurídica.',
-    actionText: 'Quero investir com estratégia',
-    whatsappMessage: 'Olá, Jacqueline! Tenho interesse em investir no mercado imobiliário e gostaria de uma orientação estratégica.'
+    id: 'ig-3',
+    caption: 'Como escolher o terreno ideal para o projeto da sua família.',
+    imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80',
+    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
+    likes: 115,
+    comments: 12,
+    tag: 'Condomínio'
   },
   {
-    id: 'procurando',
-    title: 'ESTOU PROCURANDO UM IMÓVEL',
-    description: 'Busca personalizada sob demanda: você nos conta suas necessidades específicas e nós encontramos para você.',
-    actionText: 'Falar o que estou procurando',
-    whatsappMessage: 'Olá, Jacqueline! Estou procurando um imóvel com características específicas e gostaria da sua ajuda para encontrar.'
-  }
-];
-
-export const STATS_STRIP = [
-  {
-    value: '20+',
-    label: 'Anos de experiência',
-    detail: 'No mercado imobiliário'
-  },
-  {
-    value: 'Atendimento',
-    label: 'Personalizado',
-    detail: 'Foco exclusivo no seu perfil'
-  },
-  {
-    value: 'Imóveis',
-    label: 'Oportunidades',
-    detail: 'Curadoria criteriosa de ativos'
-  },
-  {
-    value: 'Investimentos',
-    label: 'Estratégia',
-    detail: 'Visão patrimonial de longo prazo'
-  }
-];
-
-
-export const INVESTMENT_PILLARS = [
-  {
-    id: 'p-1',
-    title: 'Análise de oportunidades',
-    subtitle: 'Avaliação de imóveis e possibilidades de investimento',
-    description: 'Estudo criterioso de viabilidade, comparativo de metro quadrado, liquidez projetada e risco-retorno antes de qualquer aporte de capital.',
-    icon: 'BarChart3'
-  },
-  {
-    id: 'p-2',
-    title: 'Orientação personalizada',
-    subtitle: 'Atendimento de acordo com os objetivos de cada cliente',
-    description: 'Estratégia sob medida para diversificação de portfólio, proteção contra inflação, ganho de capital na valorização ou renda passiva mensal.',
-    icon: 'Compass'
-  },
-  {
-    id: 'p-3',
-    title: 'Visão de mercado',
-    subtitle: 'Experiência para identificar boas oportunidades imobiliárias',
-    description: '20 anos de discernimento prático para enxergar potenciais de valorização antes que se tornem evidentes para o público geral.',
-    icon: 'Sparkles'
+    id: 'ig-4',
+    caption: 'Pôr do sol da varanda da nossa cobertura em Pará de Minas.',
+    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80',
+    link: 'https://www.instagram.com/jacquelinealmeida_corretora/',
+    likes: 230,
+    comments: 31,
+    tag: 'Exclusivo'
   }
 ];
