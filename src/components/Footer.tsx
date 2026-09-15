@@ -1,5 +1,6 @@
 import React from 'react';
 import { BROKER_INFO, createWhatsAppUrl } from '../data/content';
+import { JacquelineLogo } from './JacquelineLogo';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -12,10 +13,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
   const navLinks = [
     { label: 'Início', target: 'inicio' },
-    { label: 'Sobre', target: 'sobre' },
     { label: 'Imóveis', target: 'imoveis' },
+    { label: 'Categorias', target: 'categorias' },
+    { label: 'Sobre', target: 'sobre' },
     { label: 'Investimentos', target: 'investimentos' },
-    { label: 'Diferenciais', target: 'diferenciais' },
+    { label: 'Serviços', target: 'servicos' },
     { label: 'Contato', target: 'contato' },
   ];
 
@@ -29,17 +31,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           
           {/* Informações Institucionais */}
           <div className="md:col-span-6 space-y-4">
-            <div>
-              <span className="font-serif text-2xl text-[#292725] tracking-tight block">
-                Jacqueline Almeida
-              </span>
-              <p className="text-xs uppercase tracking-widest text-[#B8944A] mt-1">
-                Corretora de Imóveis • {BROKER_INFO.creci}
-              </p>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-[#060606] border border-[#B8944A]/40 shrink-0 p-1 flex items-center justify-center">
+                <JacquelineLogo variant="icon" className="w-full h-full" />
+              </div>
+              <div>
+                <span className="font-serif text-2xl text-[#292725] tracking-tight block">
+                  Jacqueline Almeida
+                </span>
+                <p className="text-xs uppercase tracking-widest text-[#B8944A] mt-1">
+                  Corretora de Imóveis • {BROKER_INFO.creci}
+                </p>
+              </div>
             </div>
 
             <p className="text-xs text-[#5A4636] leading-relaxed max-w-md font-normal">
-              Assessoria imobiliária especializada em Londrina e região. Duas décadas dedicadas à seleção de oportunidades e orientação patrimonial.
+              Assessoria imobiliária especializada em Nova Serrana, Belo Horizonte e região. Duas décadas dedicadas à seleção de oportunidades e orientação patrimonial.
             </p>
 
             <div className="pt-2 flex items-center gap-6 text-xs uppercase tracking-widest">

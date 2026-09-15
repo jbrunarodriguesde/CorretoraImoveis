@@ -1,4 +1,4 @@
-import { Property, CategoryCard, Testimonial, InstagramPostItem } from '../types';
+import { Property, CategoryCard, Testimonial, InstagramPostItem, HeroSlide, RealEstateService } from '../types';
 
 export const BROKER_INFO = {
   name: 'Jacqueline Almeida',
@@ -12,7 +12,7 @@ export const BROKER_INFO = {
   instagramHandle: '@jacquelinealmeida_corretora',
   instagramUrl: 'https://www.instagram.com/jacquelinealmeida_corretora/',
   email: 'contato@jacquelinealmeidacorretora.com.br',
-  region: 'Minas Gerais & Região Centro-Oeste / Alto Padrão',
+  region: 'Minas Gerais (Nova Serrana, Belo Horizonte, Divinópolis e Região)',
   hours: 'Segunda a Sábado, das 08h às 19h (Atendimento com hora marcada)',
 };
 
@@ -21,13 +21,150 @@ export const createWhatsAppUrl = (message: string) => {
   return `https://wa.me/${BROKER_INFO.phoneRaw}?text=${encoded}`;
 };
 
+export const HERO_SLIDES: HeroSlide[] = [
+  {
+    id: 'slide-1',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=85',
+    title: 'Casas de Alto Padrão com Piscina',
+    tag: 'Condomínio Fechado'
+  },
+  {
+    id: 'slide-2',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85',
+    title: 'Fachadas e Projetos Contemporâneos',
+    tag: 'Arquitetura Moderna'
+  },
+  {
+    id: 'slide-3',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=85',
+    title: 'Apartamentos & Penthouses Exclusivas',
+    tag: 'Belo Horizonte & Região'
+  },
+  {
+    id: 'slide-4',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=85',
+    title: 'Lotes e Terrenos em Condomínio',
+    tag: 'Paisagens de Minas Gerais'
+  },
+  {
+    id: 'slide-5',
+    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=85',
+    title: 'Residências com Área de Lazer Completa',
+    tag: 'Piscina & Varanda Gourmet'
+  },
+  {
+    id: 'slide-6',
+    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=85',
+    title: 'Grandes Oportunidades em Nova Serrana & MG',
+    tag: 'Valorização Imobiliária'
+  }
+];
+
 export const PROPERTIES: Property[] = [
+  {
+    id: 'prop-ns-1',
+    code: 'JA-201',
+    title: 'Casa em Nova Serrana',
+    type: 'casa',
+    typeName: 'Casa Contemporânea',
+    price: 1250000,
+    priceFormatted: 'R$ 1.250.000',
+    location: 'Bairro Residencial Nobre',
+    neighborhood: 'Park Dona Zeli',
+    city: 'Nova Serrana / MG',
+    description: 'Casa moderna com fachada imponente, 3 suítes, living com pé-direito elevado e espaço gourmet com piscina aquecida.',
+    fullDescription: 'Excelente imóvel com acabamentos de primeira linha em porcelanato acetinado e bancadas em quartzo. Projeto luminotécnico em LED, suíte master com closet generoso, cozinha em ilha integrada ao espaço gourmet com churrasqueira e piscina privativa com cascata.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80'
+    ],
+    areaM2: 280,
+    bedrooms: 3,
+    suites: 3,
+    bathrooms: 4,
+    parkingSpots: 3,
+    features: [
+      'Piscina aquecida com hidro e cascata',
+      'Área gourmet completa com churrasqueira',
+      'Pé-direito duplo no living',
+      'Garagem coberta para 3 veículos',
+      'Pré-disposição para energia solar'
+    ],
+    badge: 'Destaque',
+    featured: true,
+  },
+  {
+    id: 'prop-bh-1',
+    code: 'JA-202',
+    title: 'Apartamento em Belo Horizonte',
+    type: 'apartamento',
+    typeName: 'Apartamento de Alto Padrão',
+    price: 890000,
+    priceFormatted: 'R$ 890.000',
+    location: 'Região Nobre Sul',
+    neighborhood: 'Funcionários / Savassi',
+    city: 'Belo Horizonte / MG',
+    description: 'Apartamento elegante com varanda gourmet, 3 quartos, vista livre definitiva e acabamentos refinados.',
+    fullDescription: 'Localização privilegiada próximo aos melhores pontos da capital mineira. Edifício moderno com portaria 24h, lazer completo, piscina climatizada, salão de festas e academia equipada. Unidade com marcenaria planejada, suíte espaçosa e 2 vagas de garagem demarcadas.',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80'
+    ],
+    areaM2: 115,
+    bedrooms: 3,
+    suites: 1,
+    bathrooms: 3,
+    parkingSpots: 2,
+    features: [
+      'Varanda gourmet com vista panorâmica',
+      'Prédio moderno com lazer completo',
+      'Piscina e academia no condomínio',
+      '2 vagas de garagem demarcadas',
+      'Segurança e portaria 24h'
+    ],
+    badge: 'Oportunidade',
+    featured: true,
+  },
+  {
+    id: 'prop-lote-1',
+    code: 'JA-203',
+    title: 'Lote em condomínio',
+    type: 'lote',
+    typeName: 'Lote em Condomínio Fechado',
+    price: 320000,
+    priceFormatted: 'R$ 320.000',
+    location: 'Condomínio Fechado Residencial',
+    neighborhood: 'Reserva das Palmeiras',
+    city: 'Nova Serrana / MG',
+    description: 'Terreno plano de 500 m² pronto para construir em condomínio com portaria 24h, lago e área de lazer completa.',
+    fullDescription: 'Excelente lote com topografia 100% plana, facilitando o custo de fundação da sua obra. Localizado na parte alta do condomínio, garantindo ventilação constante e vista permanente para a serra. Infraestrutura com asfalto ecológico, água, energia, clube privativo e quadras esportivas.',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    gallery: [
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80'
+    ],
+    areaM2: 500,
+    features: [
+      'Topografia 100% plana e pronta para construir',
+      'Portaria blindada e controle de acesso 24h',
+      'Clube com piscina e quadras de tênis',
+      'Fácil acesso ao centro da cidade',
+      'Documentação regularizada e escritura imediata'
+    ],
+    badge: 'Mais Buscado',
+    featured: true,
+  },
   {
     id: 'prop-1',
     code: 'JA-101',
-    title: 'Residência Villa Imperial Alphaville',
+    title: 'Mansão Villa Imperial Alphaville',
     type: 'casa',
-    typeName: 'Casa em Condomínio',
+    typeName: 'Casa em Condomínio Fechado',
     price: 3450000,
     priceFormatted: 'R$ 3.450.000',
     location: 'Condomínio Fechado Alphaville',
@@ -280,37 +417,71 @@ export const PROPERTIES: Property[] = [
 export const CATEGORIES: CategoryCard[] = [
   {
     id: 'cat-casas',
-    title: 'CASAS À VENDA',
+    title: 'CASAS',
     slug: 'casa',
-    description: 'Mansões em condomínios fechados, residências de alto padrão e projetos com privacidade e lazer total.',
-    imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
-    countLabel: 'Propriedades exclusivas'
-  },
-  {
-    id: 'cat-lotes',
-    title: 'LOTES À VENDA',
-    slug: 'lote',
-    description: 'Terrenos nobres para construir a casa dos seus sonhos ou investir em loteamentos de alta valorização.',
-    imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80',
-    countLabel: 'Topografias selecionadas'
+    description: 'Mansões e casas de alto padrão em condomínios fechados com piscina e lazer privativo.',
+    imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+    countLabel: 'Alto Padrão & Condomínios'
   },
   {
     id: 'cat-aptos',
-    title: 'APARTAMENTOS À VENDA',
+    title: 'APARTAMENTOS',
     slug: 'apartamento',
-    description: 'Coberturas, penthouses e unidades exclusivas nos endereços mais prestigiados da região.',
-    imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-    countLabel: 'Penthouses e residências'
+    description: 'Unidades nobres, coberturas e penthouses nas melhores localizações de Belo Horizonte e região.',
+    imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80',
+    countLabel: 'Coberturas & Penthouses'
+  },
+  {
+    id: 'cat-lotes',
+    title: 'LOTES',
+    slug: 'lote',
+    description: 'Terrenos planos e topografias privilegiadas para construir em condomínios de alto padrão.',
+    imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    countLabel: 'Lotes em Condomínio'
   },
   {
     id: 'cat-invest',
-    title: 'OPORTUNIDADES DE INVESTIMENTO',
+    title: 'INVESTIMENTOS',
     slug: 'investimento',
-    description: 'Ativos corporativos, galpões e ativos geradores de renda com estratégia e segurança jurídica.',
-    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    countLabel: 'Renda e valorização sólida'
+    description: 'Ativos estratégicos com rentabilidade imediata e alto potencial de valorização futura.',
+    imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+    countLabel: 'Renda & Valorização'
   }
 ];
+
+export const REAL_ESTATE_SERVICES: RealEstateService[] = [
+  {
+    id: 'serv-1',
+    title: 'Compra de imóveis',
+    description: 'Curadoria criteriosa de casas, apartamentos e áreas nobres com assessoria segura do início ao registro.',
+    whatsappMessage: 'Olá, Jacqueline! Gostaria de assessoria para compra de um imóvel.'
+  },
+  {
+    id: 'serv-2',
+    title: 'Venda de imóveis',
+    description: 'Posicionamento qualificado, discrição e acesso direto a compradores e investidores selecionados.',
+    whatsappMessage: 'Olá, Jacqueline! Desejo cadastrar meu imóvel para venda com sua assessoria.'
+  },
+  {
+    id: 'serv-3',
+    title: 'Lotes e terrenos',
+    description: 'Seleção de lotes em condomínios fechados, topografias privilegiadas e áreas de expansão em Minas Gerais.',
+    whatsappMessage: 'Olá, Jacqueline! Estou procurando lotes e terrenos para construir ou investir.'
+  },
+  {
+    id: 'serv-4',
+    title: 'Investimentos imobiliários',
+    description: 'Identificação de ativos com rentabilidade consistente, segurança documental e ganho patrimonial.',
+    whatsappMessage: 'Olá, Jacqueline! Quero conhecer as melhores oportunidades de investimento imobiliário.'
+  },
+  {
+    id: 'serv-5',
+    title: 'Consultoria imobiliária',
+    description: 'Due diligence completa, avaliação mercadológica precisa e atendimento pessoal direto com 20 anos de mercado.',
+    whatsappMessage: 'Olá, Jacqueline! Gostaria de agendar uma consultoria imobiliária personalizada.'
+  }
+];
+
 
 export const TESTIMONIALS: Testimonial[] = [
   {

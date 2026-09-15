@@ -63,3 +63,18 @@ export interface ContactFormData {
   interest: string;
   message: string;
 }
+
+export interface HeroSlide {
+  id: string;
+  image: string;
+  title: string;
+  tag: string;
+}
+
+export interface RealEstateService {
+  id: string;
+  title: string;
+  description: string;
+  whatsappMessage: string;
+}
+

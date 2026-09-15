@@ -20,8 +20,9 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
 
   const navLinks = [
     { label: 'Início', target: 'inicio' },
-    { label: 'Sobre', target: 'sobre' },
     { label: 'Imóveis', target: 'imoveis' },
+    { label: 'Categorias', target: 'categorias' },
+    { label: 'Sobre', target: 'sobre' },
     { label: 'Investimentos', target: 'investimentos' },
     { label: 'Serviços', target: 'servicos' },
     { label: 'Contato', target: 'contato' },
@@ -48,16 +49,16 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
           {/* Logo / Nome à esquerda */}
           <button
             onClick={() => handleLinkClick('inicio')}
-            className="text-left focus:outline-none"
+            className="text-left focus:outline-none group"
             aria-label="Ir para o início"
             id="header-logo-btn"
           >
-            <span className="font-serif text-lg sm:text-xl tracking-[0.14em] text-[#292725] block font-medium">
+            <span className="font-serif text-lg sm:text-xl tracking-[0.14em] text-[#292725] block font-medium group-hover:text-[#5A4636] transition-colors">
               JACQUELINE ALMEIDA
             </span>
-            <span className="font-sans text-[10px] tracking-[0.24em] text-[#5A4636] block uppercase mt-0.5">
+            {/* <span className="font-sans text-[10px] tracking-[0.24em] text-[#5A4636] block uppercase mt-0.5">
               Corretora de Imóveis • CRECI 24.891
-            </span>
+            </span> */}
           </button>
 
           {/* Menu à direita (Desktop) */}

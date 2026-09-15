@@ -1,79 +1,68 @@
 import React from 'react';
 import { createWhatsAppUrl } from '../data/content';
+import { TrendingUp, ArrowUpRight } from 'lucide-react';
 
 export const InvestmentSection: React.FC = () => {
-  const handleInvestmentChat = () => {
-    const msg = 'Olá, Jacqueline! Acessei seu site e gostaria de conversar sobre investimentos e oportunidades imobiliárias.';
-    window.open(createWhatsAppUrl(msg), '_blank');
-  };
-
-  const differentials = [
-    {
-      number: '01',
-      title: 'Análise de Oportunidades',
-      description: 'Avaliação técnica de custo por metro quadrado, vocação da região e projeção realista de valorização antes de qualquer compromisso.',
-    },
-    {
-      number: '02',
-      title: 'Orientação Personalizada',
-      description: 'Direcionamento alinhado ao seu horizonte de tempo, seja para retorno mensal com locação ou ganho expressivo de capital.',
-    },
-    {
-      number: '03',
-      title: 'Conhecimento de Mercado',
-      description: 'Duas décadas de atuação direta vivenciando ciclos econômicos, novos eixos de expansão urbana e segurança jurídica documental.',
-    },
-  ];
+  const whatsappUrl = createWhatsAppUrl(
+    'Olá, Jacqueline! Gostaria de conhecer as oportunidades de investimento imobiliário disponíveis.'
+  );
 
   return (
     <section
       id="investimentos"
-      className="py-24 sm:py-36 bg-[#F1ECE4] border-t border-[#E8E2D7]"
+      className="py-16 sm:py-24 bg-[#FAF8F4] relative"
       aria-label="Investimentos Imobiliários"
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
-        {/* Cabeçalho Editorial */}
-        <div className="space-y-6">
-          <p className="text-xs uppercase tracking-[0.28em] text-[#5A4636] font-medium">
-            Investimentos Imobiliários
-          </p>
+        {/* Bloco Visual de Alto Contraste com Fotografia Forte de Imóvel */}
+        <div className="relative overflow-hidden bg-[#14100D] text-white border border-[#292725] shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[440px]">
+            
+            {/* Coluna Textual Objetiva */}
+            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 flex flex-col justify-between space-y-8 z-10">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold uppercase tracking-[0.28em]">
+                  <TrendingUp className="w-4 h-4" />
+                  <span>Estratégia Patrimonial</span>
+                </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#292725] font-normal leading-[1.2] tracking-tight max-w-3xl">
-            &ldquo;Investir em imóveis exige mais do que encontrar um bom imóvel.&rdquo;
-          </h2>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] tracking-tight text-[#FAF8F4]">
+                  Seu imóvel também pode ser um <span className="italic font-normal text-[#E8DCC4]">investimento.</span>
+                </h2>
 
-          <p className="font-sans text-base sm:text-lg text-[#5A4636] leading-relaxed max-w-3xl font-normal">
-            Exige compreender localização, liquidez, momento de mercado e objetivos de curto, médio e longo prazo. Com 20 anos de atuação contínua, Jacqueline Almeida auxilia na identificação de ativos sólidos e na estruturação de decisões seguras.
-          </p>
-        </div>
+                <p className="text-base sm:text-lg text-white/80 leading-relaxed font-normal pt-2">
+                  Jacqueline Almeida auxilia clientes na identificação de oportunidades imobiliárias estratégicas — analisando liquidez, potencial de valorização e geração de renda com segurança jurídica total.
+                </p>
+              </div>
 
-        {/* Diferenciais em Lista Simples (Sem Cards) */}
-        <div className="mt-16 sm:mt-20 pt-12 border-t border-[#E8E2D7] grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
-          {differentials.map((item) => (
-            <div key={item.number} className="space-y-3">
-              <span className="text-xs font-mono text-[#B8944A] tracking-wider uppercase block">
-                {item.number}
-              </span>
-              <h3 className="font-serif text-xl text-[#292725] font-normal">
-                {item.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-[#5A4636] leading-relaxed font-normal">
-                {item.description}
-              </p>
+              {/* Botão Solicitado */}
+              <div className="pt-2">
+                <a
+                  id="investment-opportunities-btn"
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#D4AF37] hover:bg-[#FAF8F4] text-[#14100D] text-xs font-bold tracking-widest uppercase transition-all shadow-lg active:scale-95"
+                >
+                  <span>CONHEÇA AS OPORTUNIDADES</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+              </div>
             </div>
-          ))}
-        </div>
 
-        {/* Ação simples e elegante */}
-        <div className="mt-16 sm:mt-20 pt-8 flex items-center">
-          <button
-            id="investment-whatsapp-btn"
-            onClick={handleInvestmentChat}
-            className="px-8 py-4 bg-[#5A4636] text-[#FAF8F4] hover:bg-[#292725] text-xs font-medium tracking-widest uppercase transition-colors"
-          >
-            Falar sobre investimentos
-          </button>
+            {/* Coluna com Fotografia Forte de Empreendimento / Imóvel */}
+            <div className="lg:col-span-6 relative min-h-[280px] lg:min-h-[auto] overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+                alt="Empreendimento corporativo e residencial de alto padrão"
+                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#14100D] via-[#14100D]/40 to-transparent" />
+            </div>
+
+          </div>
         </div>
 
       </div>

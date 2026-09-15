@@ -1,267 +1,114 @@
 import React, { useState } from 'react';
 import { BROKER_INFO, createWhatsAppUrl } from '../data/content';
-import { ContactFormData } from '../types';
+import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
+  const [formData, setFormData] = useState({
     name: '',
-    whatsapp: '',
-    email: '',
-    interest: 'Comprar um imóvel',
-    message: '',
+    phone: '',
+    interest: 'Comprar imóvel',
+    message: ''
   });
-
   const [submitted, setSubmitted] = useState(false);
-  const [isSending, setIsSending] = useState(false);
 
-  const contactReasons = [
-    'Comprar um imóvel',
-    'Vender meu imóvel',
-    'Investimentos imobiliários',
-    'Busca de imóvel específico',
-    'Avaliação imobiliária',
-    'Outro assunto',
-  ];
+  const directWhatsAppUrl = createWhatsAppUrl(
+    'Olá, Jacqueline! Acessei seu site e gostaria de conversar sobre oportunidades imobiliárias.'
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSending(true);
-
-    setTimeout(() => {
-      setIsSending(false);
-      setSubmitted(true);
-
-      const fullText = `*Contato via Site*\n\n*Nome:* ${formData.name}\n*WhatsApp:* ${formData.whatsapp}\n*E-mail:* ${formData.email}\n*Objetivo:* ${formData.interest}\n*Mensagem:* ${formData.message || 'Sem mensagem adicional'}`;
-      const url = createWhatsAppUrl(fullText);
-      window.open(url, '_blank');
-    }, 400);
-  };
-
-  const handleReset = () => {
-    setSubmitted(false);
-    setFormData({
-      name: '',
-      whatsapp: '',
-      email: '',
-      interest: 'Comprar um imóvel',
-      message: '',
-    });
+    setSubmitted(true);
+    const text = `*Contato via Site*\n\n*Nome:* ${formData.name}\n*Telefone/WhatsApp:* ${formData.phone}\n*Interesse:* ${formData.interest}\n*Mensagem:* ${formData.message || 'Gostaria de agendar um atendimento.'}`;
+    window.open(createWhatsAppUrl(text), '_blank');
   };
 
   return (
     <section
       id="contato"
-      className="py-24 sm:py-36 bg-[#FAF8F4] border-t border-[#E8E2D7]"
-      aria-label="Contato"
+      className="py-16 sm:py-24 bg-[#14100D] text-white relative overflow-hidden"
+      aria-label="Contato com Jacqueline Almeida"
     >
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
-        
-        {/* Cabeçalho da Seção */}
-        <div className="space-y-4 max-w-2xl mb-16 sm:mb-20">
-          <p className="text-xs uppercase tracking-[0.28em] text-[#5A4636] font-medium">
-            Atendimento Exclusivo
-          </p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#292725] font-normal leading-[1.2] tracking-tight">
-            Iniciar conversa
-          </h2>
-          <p className="font-sans text-base text-[#5A4636] leading-relaxed font-normal">
-            Dê o primeiro passo para o seu próximo imóvel ou investimento com discrição e orientação técnica.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start border-t border-[#E8E2D7] pt-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
-          {/* Coluna Esquerda: Informações Tipográficas Limpas (Sem caixas) */}
-          <div className="lg:col-span-5 space-y-10">
-            <div>
-              <h3 className="font-serif text-2xl text-[#292725] font-normal mb-1">
-                {BROKER_INFO.name}
-              </h3>
-              <p className="text-xs uppercase tracking-widest text-[#B8944A]">
-                {BROKER_INFO.role} • {BROKER_INFO.creci}
-              </p>
-              <p className="text-xs text-[#5A4636] mt-1 font-normal">
-                {BROKER_INFO.experienceYears} de experiência no mercado imobiliário
+          {/* Coluna Esquerda: Texto Principal + Grande Botão WhatsApp + Informações */}
+          <div className="lg:col-span-7 space-y-8 z-10">
+            <div className="space-y-4">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#D4AF37] font-semibold block">
+                ATENDIMENTO DIRETO
+              </span>
+
+              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#FAF8F4] font-normal tracking-tight leading-[1.1]">
+                Vamos encontrar seu <span className="italic font-normal text-[#E8DCC4]">próximo imóvel?</span>
+              </h2>
+
+              <p className="font-sans text-base sm:text-xl text-white/80 leading-relaxed font-normal max-w-xl pt-1">
+                Fale com Jacqueline e encontre uma oportunidade que combine com seus objetivos.
               </p>
             </div>
 
-            <div className="space-y-6 text-xs text-[#5A4636]">
-              <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#5A4636]/70 block mb-1">
-                  WhatsApp & Telefone
-                </span>
-                <a
-                  href={createWhatsAppUrl('Olá, Jacqueline! Gostaria de falar sobre imóveis.')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-serif text-base text-[#292725] hover:text-[#5A4636] transition-colors"
-                >
-                  {BROKER_INFO.phoneDisplay}
-                </a>
-              </div>
-
-              <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#5A4636]/70 block mb-1">
-                  E-mail Direto
-                </span>
-                <a
-                  href={`mailto:${BROKER_INFO.email}`}
-                  className="font-sans text-sm text-[#292725] hover:text-[#5A4636] transition-colors"
-                >
-                  {BROKER_INFO.email}
-                </a>
-              </div>
-
-              <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#5A4636]/70 block mb-1">
-                  Instagram
-                </span>
-                <a
-                  href={BROKER_INFO.instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-sans text-sm text-[#292725] hover:text-[#5A4636] transition-colors"
-                >
-                  {BROKER_INFO.instagramHandle}
-                </a>
-              </div>
-
-              <div>
-                <span className="text-[10px] uppercase tracking-widest text-[#5A4636]/70 block mb-1">
-                  Região de Atuação
-                </span>
-                <p className="font-sans text-sm text-[#292725]">
-                  {BROKER_INFO.region}
-                </p>
-              </div>
+            {/* Botão Grande Solicitado */}
+            <div className="pt-2">
+              <a
+                id="contact-whatsapp-main-btn"
+                href={directWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-5 bg-[#25D366] hover:bg-[#20BA5A] text-white text-sm sm:text-base font-bold tracking-wider uppercase transition-all shadow-[0_10px_30px_rgba(37,211,102,0.35)] hover:shadow-[0_12px_35px_rgba(37,211,102,0.5)] active:scale-95"
+              >
+                {/* Ícone Oficial do WhatsApp */}
+                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-white shrink-0" aria-hidden="true">
+                  <path d="M17.472 14.382c-.301-.15-1.78-.879-2.056-.979-.275-.1-.475-.15-.675.15-.2.3-.775.979-.95 1.179-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.414-1.49-1.147-1.023-1.921-2.288-2.146-2.673-.225-.385-.024-.593.126-.742.135-.134.301-.35.451-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.628-.925-2.228-.243-.585-.49-.505-.675-.515-.175-.01-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.027-1.05 2.504 0 1.477 1.075 2.899 1.225 3.099.15.2 2.115 3.23 5.124 4.53 3.009 1.3 3.009.867 3.559.813.55-.054 1.78-.727 2.03-1.428.25-.701.25-1.302.175-1.428-.075-.126-.275-.2-.575-.35zM12.04 2C6.516 2 2.022 6.484 2.022 12c0 1.98.577 3.824 1.578 5.378L2.247 22l4.767-1.332A9.974 9.974 0 0012.04 22c5.524 0 10.018-4.484 10.018-10S17.564 2 12.04 2zm0 18.27a8.23 8.23 0 01-4.204-1.155l-.302-.18-3.125.873.834-3.045-.198-.315A8.256 8.256 0 013.784 12c0-4.552 3.704-8.256 8.256-8.256s8.256 3.704 8.256 8.256-3.704 8.27-8.256 8.27z" />
+                </svg>
+                <span>FALAR PELO WHATSAPP</span>
+              </a>
             </div>
 
-            <p className="text-xs text-[#5A4636] leading-relaxed pt-6 border-t border-[#E8E2D7]">
-              Atendimentos presenciais com hora marcada e visitas previamente organizadas para respeitar a sua agenda.
-            </p>
+            {/* Informações Institucionais Compactas */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-white/10 text-xs text-white/70">
+              <div className="flex items-center gap-2.5">
+                <Phone className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                <span>{BROKER_INFO.phoneDisplay}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <MapPin className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                <span>{BROKER_INFO.region}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                <span>{BROKER_INFO.email}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Clock className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                <span>{BROKER_INFO.creci}</span>
+              </div>
+            </div>
           </div>
 
-          {/* Coluna Direita: Formulário Editorial com Linhas e Espaçamento Natural */}
-          <div className="lg:col-span-7">
-            {submitted ? (
-              <div className="py-12 space-y-4">
-                <h3 className="font-serif text-2xl text-[#292725] font-normal">
-                  Mensagem encaminhada.
-                </h3>
-                <p className="text-sm text-[#5A4636] leading-relaxed">
-                  Sua mensagem foi direcionada para o WhatsApp de Jacqueline Almeida. Você receberá um retorno em breve.
+          {/* Coluna Direita: Grande Fotografia de Casa Bonita */}
+          <div className="lg:col-span-5 relative">
+            <div className="aspect-[4/3] sm:aspect-square overflow-hidden border border-white/15 shadow-2xl relative group">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+                alt="Casa contemporânea de alto padrão"
+                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#14100D]/80 via-transparent to-transparent" />
+              
+              <div className="absolute bottom-6 left-6 right-6 text-xs text-white/90">
+                <p className="font-serif text-lg text-white font-normal mb-0.5">
+                  Atendimento com hora marcada
                 </p>
-                <div className="pt-4">
-                  <button
-                    type="button"
-                    onClick={handleReset}
-                    className="text-xs uppercase tracking-widest text-[#5A4636] underline underline-offset-4 hover:text-[#292725]"
-                  >
-                    Enviar outra mensagem
-                  </button>
-                </div>
+                <p className="text-[11px] text-[#D4AF37] uppercase tracking-wider">
+                  20 Anos de Experiência no Mercado Imobiliário
+                </p>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                
-                <div>
-                  <label htmlFor="contact-name" className="block text-[10px] uppercase tracking-widest text-[#5A4636] mb-2 font-medium">
-                    Nome completo
-                  </label>
-                  <input
-                    type="text"
-                    id="contact-name"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Seu nome"
-                    className="w-full bg-transparent border-b border-[#E8E2D7] py-3 text-sm text-[#292725] placeholder-[#5A4636]/40 focus:outline-none focus:border-[#5A4636] transition-colors rounded-none"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="contact-whatsapp" className="block text-[10px] uppercase tracking-widest text-[#5A4636] mb-2 font-medium">
-                      WhatsApp
-                    </label>
-                    <input
-                      type="tel"
-                      id="contact-whatsapp"
-                      required
-                      value={formData.whatsapp}
-                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                      placeholder="(43) 99999-9999"
-                      className="w-full bg-transparent border-b border-[#E8E2D7] py-3 text-sm text-[#292725] placeholder-[#5A4636]/40 focus:outline-none focus:border-[#5A4636] transition-colors rounded-none"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="contact-email" className="block text-[10px] uppercase tracking-widest text-[#5A4636] mb-2 font-medium">
-                      E-mail
-                    </label>
-                    <input
-                      type="email"
-                      id="contact-email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="seuemail@exemplo.com"
-                      className="w-full bg-transparent border-b border-[#E8E2D7] py-3 text-sm text-[#292725] placeholder-[#5A4636]/40 focus:outline-none focus:border-[#5A4636] transition-colors rounded-none"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="contact-reason" className="block text-[10px] uppercase tracking-widest text-[#5A4636] mb-2 font-medium">
-                    Objetivo
-                  </label>
-                  <select
-                    id="contact-reason"
-                    value={formData.interest}
-                    onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                    className="w-full bg-transparent border-b border-[#E8E2D7] py-3 text-sm text-[#292725] focus:outline-none focus:border-[#5A4636] transition-colors rounded-none"
-                  >
-                    {contactReasons.map((reason, idx) => (
-                      <option key={idx} value={reason} className="bg-[#FAF8F4] text-[#292725]">
-                        {reason}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="contact-message" className="block text-[10px] uppercase tracking-widest text-[#5A4636] mb-2 font-medium">
-                    Mensagem (opcional)
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    rows={3}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Região preferida, perfil do imóvel ou objetivo de investimento..."
-                    className="w-full bg-transparent border-b border-[#E8E2D7] py-3 text-sm text-[#292725] placeholder-[#5A4636]/40 focus:outline-none focus:border-[#5A4636] transition-colors resize-none rounded-none"
-                  />
-                </div>
-
-                <div className="pt-4">
-                  <button
-                    type="submit"
-                    id="btn-submit-contact"
-                    disabled={isSending}
-                    className="px-8 py-4 bg-[#5A4636] text-[#FAF8F4] hover:bg-[#292725] text-xs font-medium tracking-widest uppercase transition-colors disabled:opacity-50"
-                  >
-                    {isSending ? 'Enviando...' : 'Enviar mensagem'}
-                  </button>
-                </div>
-
-              </form>
-            )}
+            </div>
           </div>
 
         </div>
-
       </div>
     </section>
   );
 };
-
