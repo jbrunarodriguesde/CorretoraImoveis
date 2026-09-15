@@ -1,0 +1,8 @@
+{
+  "name": "Site Corretora de Imóveis",
+  "description": "Site institucional e editorial de Jacqueline Almeida, corretora de imóveis com 20 anos de experiência e especialista em investimentos imobiliários.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
